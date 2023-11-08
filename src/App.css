@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
-}
+/* app.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Define uma fonte padrão para o corpo do aplicativo */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #20232A;
+  /* Fundo escuro */
+  color: #ffffff;
+  /* Cor do texto padrão */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  margin: 0;
+}
+
+/* Estiliza o contêiner principal */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.664);
+  /* Cor transparente com destaque suave */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.2);
+  /* Sombra suave */
+  padding: 20px;
+}
+
+/* Estiliza a coluna esquerda para cadastro e atualização */
+.left-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  margin-top: 60px;
+  margin-right: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estiliza a coluna direita para listagem e deleção */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estiliza o cabeçalho h1 */
+h1 {
+  font-size: 16px;
+  /* Títulos não muito grandes */
+  color: #042731;
+  /* Cor azul brilhante */
+}
+
+/* Estiliza os títulos h2 */
+h2 {
+  font-size: 16px;
+  /* Títulos não muito grandes */
+  color: #042731;
+}
+
+/* Estiliza os botões */
+button {
+  background-color: #05252e;
+  /* Cor azul brilhante */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Estiliza os botões de Excluir */
+button.delete {
+  background-color: #240502;
+  /* Cor vermelha discreta */
+}
+
+/* Efeito de hover para botões */
+button:hover {
+  background-color: #011318;
+  /* Cor azul mais escura */
+  transform: scale(1.05);
+}
+
+/* Estiliza os campos de entrada de texto */
+input[type="text"] {
+  width: 400px;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  /* Cor transparente */
+  border-radius: 4px;
+  text-align: left;
+  /* Alinhado à esquerda */
+}
+
+/* Estiliza a caixa de pré-visualização JSON */
+.json-preview {
+  background-color: #000;
+  border: 1px solid #333;
+  border-radius: 4px;
+  white-space: pre;
+  font-family: 'Courier New', monospace;
+  overflow: auto;
+  color: #00FF00;
+  /* Verde */
+}
+
+/* Estiliza o texto JSON */
+.json-text {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estiliza os campos de parágrafo (p) */
+.user-list p {
+  width: 400px;
+  margin: 5px 0;
+  text-align: left !important;
+  font-size: 12px;
+  padding: 3px;
+  margin: 5px 0;
 }
